@@ -1,0 +1,294 @@
+#Question 1
+'''
+a = int(input("Enter number of numbers: "))
+counter = 0
+for x in range(0,a):
+    b = int(input("Enter numbers: "))
+    if b%2 == 0:
+        counter = counter+1
+print(counter)'''
+
+#Question 2
+'''
+a = int(input("Enter number: "))
+for i in range(0,11):
+    print(f"{a} x {i} = {a*i}.")'''
+        
+#Question 3
+'''
+a = int(input("Enter number 1: "))
+b = int(input("Enter number 2: "))
+c = int(input("Enter number 3: "))
+
+for i in range(b,c+1):
+    print(f"{a} x {i} = {a*i}.")'''
+        
+#Question 4
+'''
+a = int(input("Enter number: "))
+final = 1
+for i in range(1,a+1):
+    final = final*i
+print(final)'''
+    
+#Question 5
+'''
+a = int(input("Enter number: "))
+for i in range(1,a):
+    if a%i == 0:
+        print("Factors are", i)'''
+            
+#Question 6
+'''
+a = int(input("Enter number: "))
+for i in range(2,a):
+    if a%i == 0:
+        print("Not a prime")
+        break
+    elif i+1 == a:
+        print("Its a prime")'''
+            
+#Question 7
+'''
+day_big_20 = 0
+day_small_20 = 0
+
+for i in range(1,10+1):
+    a = int(input(f"for day {i}, enter temperature: "))
+    if a > 20:
+        day_big_20 = day_big_20 + 1
+    elif a < 20:
+        day_small_20 = day_small_20 + 1
+print(f"Days above 20 degrees celcius is {day_big_20}.\nDays bellow 20 degrees celcius is {day_small_20}")'''
+    
+#Question 8 
+'''
+import random
+max,min,avg = 0,316,0
+
+for i in range (0,100+1):
+    a = random.randint(30,316)
+    print(f"Enter car {i} speed: {a}")
+    avg = avg + a
+    if a > max:
+        max = a
+    if a < min:
+        min = a
+
+print(f"\nMax speed is {max}, Min speed is {min}; Average speed is {avg/100}.")'''
+    
+#Question 9
+'''
+b = False
+while b == False:
+    a = int(input("\nEnter number from 1-9: "))
+    if a != (1,9):
+        print("ERROR: Input not in range")
+        a = 0
+    else:
+        b = True
+d = 0
+for i in range(1,3+1):
+    c = str(a)*i
+    d = int(c) + d
+print(f"the sum of numbers that could be generated using the number as digit(s) is: {d}\n")'''
+    
+#Question 10 
+'''
+a = int(input("Enter number: "))
+b = int(input("Enter number of zeros: "))
+c,d = "",a
+for i in range(1,b):
+    c = str(a) + "0"
+    d = int(c) + d
+print("Result is:",d)'''
+    
+#Question 11
+'''
+b = ""
+books = 0
+maps = 0
+mags = 0
+
+b = input("\nEnter barcode: ")
+while b != "9999":
+    if b[0] == "1":
+        books = books + 1
+    elif b[0] == "2":
+        maps = maps + 1
+    elif b[0] == "3":
+        mags = mags + 1
+    else:
+        print("--ERROR: BARCODE UNREADABLE--")
+    b = input("\nEnter barcode: ")
+
+print(f"--PROGRAM FINISHED--\n\nThere were a total of:\n{books} books, {maps} maps and {mags} magazines.\n")'''
+    
+#Question 12
+'''
+Program title: Tax_detector
+
+Description of variables
+VAR house_costs = integer (USER INPUT)
+VAR house_tax = integer
+
+Implementation of
+
+READS house_costs
+
+STARTS IF STATEMENT
+
+IF (house_costs > $200,000) THEN
+    house_tax = house_tax + (house_costs / 100)*2
+
+ELIF (house_costs < $200,000 and house_costs > $100,000) THEN
+    house_tax = house_tax + (house_costs / 100)*1.5
+
+ELIF (house_costs < $100,000 and house_costs > $50,000) THEN
+    house_tax = house_tax + (house_costs / 100)*1
+
+END IF STATEMENT
+
+PRINT house_tax
+
+END OF PROGRAM
+'''
+
+#Question 13
+'''
+s = 1
+n = int(input())
+for i in range(1,n+1):
+    s = s + i/(i+1)
+print(s)'''
+    
+#Question 14 
+'''
+x=int(input("Enter x: "))
+n=int(input("Enter n: "))
+s,a=x,0
+for i in range(2,n+1):
+    a=(x**i)/i
+    if i%2 == 0:
+        a=a*-1
+    s=s+a
+print(s)'''
+    
+#Question 15
+'''
+a = int(input("Enter number: "))
+b = 0
+for i in range(2,a):
+    if a%i == 0:
+        for x in range(2,i):
+            if i%x == 0:
+                b = b + 1
+        if b == 0:
+            print(i)'''
+            
+#Question 16
+'''
+a = 1
+b = 0
+c = 1
+for i in range(0,20+1):
+    a = b + c
+    b = c
+    print(b)
+    c = a'''
+        
+#Question 17
+'''
+a = input("Enter number or word (not cap please): ")
+if a == a[::-1]:
+    print("Its a palindrome.")
+else:
+    print("Its not a palindrome.")'''
+        
+#Question 18
+'''
+a = int(input("Enter number: "))
+b = 0
+for i in range(1,a+1):
+    if a%i == 0:
+        b = b + i
+if b == a*2:
+    print("Perfect number!")
+else:
+    print("Not perfect number!")'''
+        
+#Question 19
+'''
+a = input("Enter number: ")
+b = 1
+s = 0
+
+for i in a:
+    for x in range(1,int(i)+1):
+        b = b * x
+    s = b+s
+    b = 1
+if s == int(a):
+    print("Its a special number!")
+else:
+    print("Its not a special number! ")'''
+        
+#Question 20
+'''
+a = input("Enter number: ")
+b = int(a)*int(a)
+if str(b)[len(a):] == a:
+    print("Its a automorhpic number!")
+else:
+    print("Its not a automorhpic number!")'''
+        
+#Question 21
+'''
+a,b,c,d=[],int(input("\nEnter number: ")),[],0
+while d!=10:a,b,c,d=a+c,b/2,[int(x)for x in str(int(b%2))],d+1
+print("In binary is:",a[::-1],"\n")'''
+    
+#Question 22
+'''
+a = input("Enter number: ")
+b = 0
+for i in a:
+    b = b + int(i)**len(a)
+if b == int(a):
+    print("Its an armstrong number!")
+else:
+    print("Its not a armstrong number!")'''
+    
+#Question 23
+'''
+z,a,b,c = input(),input(),0,0
+
+for i in a:
+    if i == "A": b = b + 1
+    elif i == "B": c = c + 1
+if c > b: print("B")
+elif c < b: print("A")
+else: print("tie")'''
+
+#Question 24
+'''
+a,b,c,d = input(),input(),input(),input()
+if a and d == "9" or a and d == "8" and b and c == c and b:
+    print("Ignore")
+else:
+    print("Answer")'''
+    
+#Question 25
+'''
+a,b,c,d = int(input()),input(),input(),0
+for i in range(0,a):
+    if b[i] == "C" and c[i] == "C":
+        d = d + 1
+print(d)'''
+
+#Question 26  
+'''
+a = int(input())
+for i in range(0,a):
+    b = input()
+    print(b[2:]*int(b[:1]))'''
