@@ -1,0 +1,230 @@
+#Question 1
+'''
+a = int(input("Enter number: "))
+if a%2 == 0:
+    print("Even")
+else:
+    print("Odd")'''
+    
+#Question 1.5 (smaller)
+'''
+print(next("even" if x %2 == 0 else 'odd' for x in [int(input("Enter number: "))]))'''
+
+#Question 2
+'''
+a,b,c = int(input()),int(input()),int(input())
+d = 0
+e = a
+for i in a,b,c:
+    if i > d:
+        d = i
+    if i < e:
+        e = i
+print(f"Biggest is {d}, Smallest is {e}.")'''
+
+#Question 3
+'''
+a = int(input("Enter age: "))
+b = int(input("Enter money: "))
+
+if a in range(13,15):
+    print("You get 30 percent off: ", 0.3 * b)
+elif a in range(16,17):
+    print("You get 20 percent off: ", 0.2 * b)
+elif a > 50:
+    print("You get 40 percent off: ", 0.4 * b)
+else:
+    print("You get no discount: ", b)'''
+    
+#Question 4
+'''
+a = int(input("\nHow many employees are there: "))
+d = 0
+
+for i in range(0,a):
+    b = input("\nEnter name (First name): ")
+    c = int(input("How many days a week do you work: "))
+    print(f"\n{b} gets {int(((c/5)*28))} days, and an allowance of USD {c*300}.\n")'''
+    
+#Question 5
+'''
+a = int(input("\nEnter distance in kilometer: "))
+b = int(input("How many passangers: "))
+print(f"\nCost of a {a}km journey with {b} passangers is {a*2+1}£.\n")
+if b >= 5:
+    print("Including a 50% tax because passanger size equals to or exceeded 5 people;")
+    print(f"Your final payment (with 50% extra) is {((a*2+1)*0.5)+(a*2+1)}£ .\n")'''
+    
+#Question 6
+'''
+a,b,c = int(input("\nEnter triangle side 1: ")),int(input("Enter triangle side 2: ")),int(input("Enter triangle side 3: "))
+if a == b and a == c:
+    print("Its a equilateral.\n")
+elif a == b or b == c or a == c:
+    print("Its a isosceles.\n")
+else:
+    print("Its a scalene.\n")'''
+    
+#Question 7
+'''
+a = int(input("\nEnter purchase cost: "))
+if a <= 2000:
+    print(f"Total price with discount is {a-(a*0.05)}.\n")
+elif a > 2000 and a <= 5000:
+    print(f"Total price with discount is {a-(a*0.07)}.\n")
+else:
+    print(f"Total price with discount is {a-(a*0.1)}.\n")'''
+    
+#Question 8
+'''
+Program title: Station_machine
+
+Description of variables
+VAR station_number = integer (USER INPUT)
+VAR number_of_passangers = integer (USER INPUT)
+
+READS station_number and number_of_passangers
+
+Implementation of
+
+VAR diffrence_between_station = VAR station_number - VAR number_of_passanger
+
+IF diffrence_between_station < 0 THEN
+    diffrence_between_station * -1 #NOTE: TO MAKE POSITIVE IF NEGATIVE
+
+VAR cost_of_journey = diffrence_between_station * 2
+
+IF number_of_passangers <= 3 THEN
+    VAR cost_of_journey = cost_of_journey - (cost_of_journey * 0.1) #NOTE: TO CALCULATE 10% DISCOUNT
+
+PRINT cost_of_journey
+
+PRINT DATA TO TICKETS
+PRINT THE TICKETS
+
+END OF PROGRAM'''
+
+#Question 9
+'''
+end = False
+while end == False:
+    p1_in = input(print("\nPlayer 1; Enter your choice Rock(r), Paper(p) or Siccor(s): "))
+    p2_in = input(print("\nPlayer 2; Enter your choice Rock(r), Paper(p) or Siccor(s): "))
+
+    if (p1_in == "r" and p2_in == "p") or (p1_in == "p" and p2_in == "s") or (p1_in == "s" and p2_in == "r"):
+        print("\nPLAYER 2, WINS!")
+    elif p1_in == p2_in:
+        print("\nITS A DRAW!")
+    else:
+        print("\nPLAYER 1, WINS!")
+
+    g_stop = input(print("\nDo you want to play again? Enter your choice yes(y) or no(n): "))
+
+    if g_stop == "n":
+        end = True'''
+        
+#Question 10
+'''
+a,b = int(input("\nEnter number of people: ")),int(input("Enter number of games: "))
+print(f"\nTotal cost with {a} players is ${(6+(a*2))*b}.", end="")
+if b >= 2:
+    print(f" With discount is ${((6+(a*2))*b) - ((6+(a*2))*b)*0.1}.\n")
+else:
+    print("\n")'''
+    
+#Question 11
+'''
+a,b = input("\nEnter anything: "),0
+for i in a:
+    b = b + 1
+print(f"The number of digits/words is {b}.\n")'''
+
+#Question 12
+'''
+a,b,c = input("\nEnter number: "),0,1
+for i in a:
+    b = int(i)+b
+    c = int(i)*c
+print(f"{a} is a special two digit number\n\nExplanation:\nSum of digits = {a[0]} + {a[1]} = {b}.",
+f"\nProduct of its digits = {a[0]} x {a[1]} = {c}.",
+f"\nSum of sum of its digits and products of its digits = {b} + {c} = {b+c}.\n" if int(b+c) == int(a) 
+else f"{a} is not a special two digit number.\n")'''
+
+#Question 13
+'''
+s,m,l = int(input("\nEnter number of small treats: ")),int(input("Enter number of Medium treats: ")),int(input("Enter number of Large treats: "))
+if 1*s+2*m+3*l >= 10:
+    print("\nhappy")
+else:
+    print("\nsad")'''
+    
+#Question 14
+'''
+a_1,a_2,a_3,b_1,b_2,b_3 = int(input()),int(input()),int(input()),int(input()),int(input()),int(input())
+if ((a_1*3)+(a_2*2)+a_3) > ((b_1*3)+(b_2*2)+b_3):
+    print("A")
+elif ((a_1*3)+(a_2*2)+a_3) == ((b_1*3)+(b_2*2)+b_3):
+    print("Tie")
+else:
+    print("B")'''
+    
+#Question 15
+'''
+a,b = int(input()),int(input())
+if a < 0 and b < 0:
+    print(3)
+elif a < 0:
+    print(2)
+elif b < 0:
+    print(4)
+else:
+    print(1)'''
+    
+#Question 16
+# NOT FOUND
+
+#Question 17 
+'''
+a = input("\nEnter your word or number (Don't use capital words): ")
+n = a 
+if a[::-1] == n:
+    print("It is a palindrome!\n")
+else:
+    print("Just another normie...\n")'''
+    
+#Question 18
+'''
+a,c = int(input("\nEnter number: ")),0
+for b in range(1, a):
+    if a%b == 0:
+        print("Factors are", b)
+        c = c + b
+print(f"{a} is a perfect number.\n" if(c==a) else f"{a} is another boring number")'''
+
+#Question 19
+'''
+a,b,c = int(input("\nEnter number: ")),1,0
+a,d = [int(x) for x in str(int(a))],a
+for i in a: 
+    for x in range(1,i+1): b=b*x
+    c,b = c+b,1
+print(f"{d} is special number.\n"if c == d else f"{d} is not a special number.\n")'''
+
+#Question 20
+'''
+#print(next("Its a autotrophic number.\n" if a**2%pow(10,len(str(a))) == a else "Not a autotrophic number.\n" for a in [(int(input("\nEnter number: ")))]))'''
+
+#Question 21
+'''
+a,b,c,d = [],int(input("\nEnter number: ")),[],0
+while d != 5:a,b,c,d = a+c,b/2,[int(x) for x in str(int(b%2))],d+1
+print("In binary is:", a[::-1], "\n")'''
+
+#Question 22
+'''
+a = input("\nEnter number: ")
+b,f,c,a = len(a),a,0,[int(x) for x in str(int(a))]
+for i in a:
+    c = (i**b)+c
+print(f"{f} is a armstrong number.\n"if int(f) == c else f"{f} is not a armstong number.\n")'''
+
